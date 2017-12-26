@@ -1,0 +1,7 @@
+{
+  "author": "",
+  "path": "/guessvote/admin/deleteScene",
+  "method": "GET",
+  "description": "Description for API",
+  "title": "删除场次"
+}

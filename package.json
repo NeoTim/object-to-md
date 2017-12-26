@@ -1,0 +1,59 @@
+{
+  "name": "object-to-md",
+  "description": "",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": {
+    "name": "forsigner",
+    "email": "forsigner@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "object-to-md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forsigner/object-to-md.git"
+  },
+  "dependencies": {
+    "json5": "^0.5.1",
+    "lodash": "^4.17.4",
+    "schema-to-json": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^4.3.0",
+    "eslint-config-egg": "^5.0.0",
+    "standard-version": "^4.2.0"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "lib/**/*"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "npm run compile && node example/index.js",
+    "compile": "babel src -d lib",
+    "release": "standard-version"
+  },
+  "bugs": {
+    "url": "https://github.com/forsigner/object-to-md/issues"
+  },
+  "homepage": "https://github.com/forsigner/object-to-md",
+  "_npmUser": {
+    "name": "forsigner",
+    "email": "forsigner@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "forsigner",
+      "email": "forsigner@gmail.com"
+    }
+  ]
+}

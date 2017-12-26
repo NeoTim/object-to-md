@@ -1,0 +1,24 @@
+{
+  "query": {
+    "properties": {
+      "sceneId": {
+        "default": 123123,
+        "type": "number"
+      },
+      "token": {
+        "default": "活动token",
+        "type": "string"
+      },
+      "actId": {
+        "default": "活动id",
+        "type": "string"
+      }
+    },
+    "required": [
+      "actId",
+      "token",
+      "sceneId"
+    ],
+    "type": "object"
+  }
+}

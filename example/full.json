@@ -1,0 +1,75 @@
+{
+  "basic": {
+    "author": "",
+    "path": "/guessvote/admin/deleteScene",
+    "method": "GET",
+    "description": "Description for API",
+    "title": "删除场次"
+  },
+  "request": {
+    "query": {
+      "properties": {
+        "sceneId": {
+          "default": 123123,
+          "type": "number"
+        },
+        "token": {
+          "default": "活动token",
+          "type": "string"
+        },
+        "actId": {
+          "default": "活动id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "actId",
+        "token",
+        "sceneId"
+      ],
+      "type": "object"
+    }
+  },
+  "createdAt": "2017-12-22T06:20:35.736Z",
+  "userId": "",
+  "responses": [
+    {
+      "body": {
+        "properties": {
+          "msg": {
+            "default": "some message",
+            "type": "string"
+          },
+          "data": {
+            "default": "",
+            "type": "string"
+          },
+          "code": {
+            "default": "OK",
+            "type": "string"
+          },
+          "success": {
+            "default": true,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "success",
+          "code",
+          "data",
+          "msg"
+        ],
+        "type": "object"
+      },
+      "mock": {
+        "enable": false,
+        "delay": 100
+      },
+      "scene": {
+        "status": "200"
+      },
+      "status": "200",
+      "description": "成功返回"
+    }
+  ]
+}

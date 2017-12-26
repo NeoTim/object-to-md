@@ -1,0 +1,62 @@
+[
+  {
+    "body": {
+      "properties": {
+        "msg": {
+          "default": "some message",
+          "type": "string"
+        },
+        "data": {
+          "default": "",
+          "type": "string"
+        },
+        "code": {
+          "default": "OK",
+          "type": "string"
+        },
+        "success": {
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": ["success", "code", "data", "msg"],
+      "type": "object"
+    },
+    "mock": {
+      "enable": false,
+      "delay": 100
+    },
+    "status": "200",
+    "description": "场景一：成功返回"
+  },
+  {
+    "body": {
+      "properties": {
+        "msg": {
+          "default": "some message",
+          "type": "string"
+        },
+        "data": {
+          "default": "",
+          "type": "string"
+        },
+        "code": {
+          "default": "OK",
+          "type": "string"
+        },
+        "success": {
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": ["success", "code", "data", "msg"],
+      "type": "object"
+    },
+    "mock": {
+      "enable": false,
+      "delay": 100
+    },
+    "status": "200",
+    "description": "成功返回"
+  }
+]
