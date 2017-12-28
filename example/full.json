@@ -11,23 +11,49 @@
       "properties": {
         "sceneId": {
           "default": 123123,
-          "type": "number"
+          "type": "number",
+          "description": "场景ID"
         },
         "token": {
           "default": "活动token",
-          "type": "string"
+          "type": "string",
+          "description": "活动token"
         },
         "actId": {
           "default": "活动id",
-          "type": "string"
+          "type": "string",
+          "description": "活动唯一ID"
         }
       },
-      "required": [
-        "actId",
-        "token",
-        "sceneId"
-      ],
+      "required": ["actId", "token", "sceneId"],
       "type": "object"
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Book name",
+          "type": "string",
+          "default": "Hackers and Painters"
+        },
+        "author": {
+          "description": "Book author",
+          "type": "string",
+          "default": "Paul Graham"
+        }
+      },
+      "required": ["name", "author"]
+    },
+    "headers": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "description": "API Token",
+          "type": "string",
+          "default": "qwerty123456"
+        }
+      },
+      "required": ["token"]
     }
   },
   "createdAt": "2017-12-22T06:20:35.736Z",
@@ -38,11 +64,30 @@
         "properties": {
           "msg": {
             "default": "some message",
-            "type": "string"
+            "type": "string",
+            "description": "接口信息"
           },
           "data": {
-            "default": "",
-            "type": "string"
+            "properties": {
+              "sceneId": {
+                "default": 123123,
+                "type": "number",
+                "description": "场景ID"
+              },
+              "token": {
+                "default": "活动token",
+                "type": "string",
+                "description": "活动token"
+              },
+              "actId": {
+                "default": "活动id",
+                "type": "string",
+                "description": "活动唯一ID"
+              }
+            },
+            "required": ["actId", "token", "sceneId"],
+            "type": "object",
+            "description": "信息体"
           },
           "code": {
             "default": "OK",
@@ -53,23 +98,15 @@
             "type": "boolean"
           }
         },
-        "required": [
-          "success",
-          "code",
-          "data",
-          "msg"
-        ],
+        "required": ["success", "code", "data", "msg"],
         "type": "object"
       },
       "mock": {
         "enable": false,
         "delay": 100
       },
-      "scene": {
-        "status": "200"
-      },
       "status": "200",
-      "description": "成功返回"
+      "description": "场景一：成功返回"
     }
   ]
 }

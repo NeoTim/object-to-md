@@ -4,11 +4,30 @@
       "properties": {
         "msg": {
           "default": "some message",
-          "type": "string"
+          "type": "string",
+          "description": "接口信息"
         },
         "data": {
-          "default": "",
-          "type": "string"
+          "properties": {
+            "sceneId": {
+              "default": 123123,
+              "type": "number",
+              "description": "场景ID"
+            },
+            "token": {
+              "default": "活动token",
+              "type": "string",
+              "description": "活动token"
+            },
+            "actId": {
+              "default": "活动id",
+              "type": "string",
+              "description": "活动唯一ID"
+            }
+          },
+          "required": ["actId", "token", "sceneId"],
+          "type": "object",
+          "description": "信息体"
         },
         "code": {
           "default": "OK",

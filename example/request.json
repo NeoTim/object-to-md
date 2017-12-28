@@ -3,15 +3,18 @@
     "properties": {
       "sceneId": {
         "default": 123123,
-        "type": "number"
+        "type": "number",
+        "description": "场景ID"
       },
       "token": {
         "default": "活动token",
-        "type": "string"
+        "type": "string",
+        "description": "活动token"
       },
       "actId": {
         "default": "活动id",
-        "type": "string"
+        "type": "string",
+        "description": "活动唯一ID"
       }
     },
     "required": [
@@ -20,5 +23,37 @@
       "sceneId"
     ],
     "type": "object"
+  },
+  "body": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "description": "Book name",
+        "type": "string",
+        "default": "Hackers and Painters"
+      },
+      "author": {
+        "description": "Book author",
+        "type": "string",
+        "default": "Paul Graham"
+      }
+    },
+    "required": [
+      "name",
+      "author"
+    ]
+  },
+  "headers": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "description": "API Token",
+        "type": "string",
+        "default": "qwerty123456"
+      }
+    },
+    "required": [
+      "token"
+    ]
   }
 }

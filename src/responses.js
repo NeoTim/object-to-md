@@ -1,8 +1,9 @@
 'use strict';
 
 const _ = require('lodash');
-const schemeToJSON = require('schema-to-json');
-const JSON5 = require('json5');
+const schemeToObject = require('schema-to-object');
+const json = require('comment-json');
+
 const { RESPONSE, toJS } = require('./constant');
 
 module.exports = (responses = []) => {
@@ -12,8 +13,8 @@ module.exports = (responses = []) => {
 
 function compileResponses(responses) {
   return _.map(responses, (item, key) => {
-    const responseObj = schemeToJSON(toJS(item.body));
-    const responseContent = JSON5.stringify(responseObj, null, 2);
+    const responseObj = schemeToObject(toJS(item.body));
+    const responseContent = json.stringify(responseObj, null, 2);
     const compiledResponse = _.template(RESPONSE);
     return compiledResponse({
       scene: key + 1,
