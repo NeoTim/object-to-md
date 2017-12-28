@@ -6,7 +6,6 @@ const objectToMd = require('../lib');
 // const responses = require('./responses.json');
 const full = require('./full.json');
 
-
 // const r = objectToMd.request(request);
 // const r = objectToMd.basic(basic);
 // const r = objectToMd.responses(responses);
