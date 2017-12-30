@@ -2,8 +2,8 @@
 
 const _ = require('lodash');
 const schemeToObject = require('schema-to-object');
-const json = require('comment-json');
-const clear = require('./clear-json-quotes');
+const { stringify } = require('json-comment-parser');
+
 
 const { RESPONSE, toJS } = require('./constant');
 
@@ -15,7 +15,7 @@ module.exports = (responses = []) => {
 function compileResponses(responses) {
   return _.map(responses, (item, key) => {
     const responseObj = schemeToObject(toJS(item.body));
-    const responseContent = clear(json.stringify(responseObj, null, 2));
+    const responseContent = stringify(responseObj, null, 2);
     const compiledResponse = _.template(RESPONSE);
     return compiledResponse({
       scene: key + 1,

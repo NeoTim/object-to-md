@@ -2,8 +2,7 @@
 
 const _ = require('lodash');
 const schemeToObject = require('schema-to-object');
-const json = require('comment-json');
-const clear = require('./clear-json-quotes');
+const { stringify } = require('json-comment-parser');
 
 const { REQUEST, toJS } = require('./constant');
 
@@ -19,7 +18,7 @@ function compileRequest(request) {
     requestObj[item] = schemeToObject(toJS(request[item]));
   });
 
-  const requestContent = clear(json.stringify(requestObj, null, 2));
+  const requestContent = stringify(requestObj, null, 2);
 
   const compiledRequest = _.template(REQUEST);
   return compiledRequest({ request: requestContent });
