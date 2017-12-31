@@ -8,7 +8,6 @@ title: <%= title %>
 description: <%= description %>
 path: <%= path %>
 method: <%= method %>
-author: <%= author %>
 \`\`\`
 `;
 
