@@ -4,7 +4,6 @@ const _ = require('lodash');
 const schemeToObject = require('schema-to-object');
 const { stringify } = require('json-comment-parser');
 
-
 const { RESPONSE, toJS } = require('./constant');
 
 module.exports = (responses = []) => {
@@ -14,7 +13,7 @@ module.exports = (responses = []) => {
 
 function compileResponses(responses) {
   return _.map(responses, (item, key) => {
-    const responseObj = schemeToObject(toJS(item.body));
+    const responseObj = schemeToObject(toJS(item.body), { comment: true });
     const responseContent = stringify(responseObj, null, 2);
     const compiledResponse = _.template(RESPONSE);
     return compiledResponse({

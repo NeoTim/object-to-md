@@ -15,7 +15,7 @@ function compileRequest(request) {
   const requestObj = {};
   Object.keys(request).forEach(item => {
     if (_.isEmpty(request[item])) return;
-    requestObj[item] = schemeToObject(toJS(request[item]));
+    requestObj[item] = schemeToObject(toJS(request[item]), { comment: true });
   });
 
   const requestContent = stringify(requestObj, null, 2);

@@ -16,9 +16,9 @@
     "url": "git+https://github.com/forsigner/object-to-md.git"
   },
   "dependencies": {
-    "json-comment-parser": "^1.1.0",
+    "json-comment-parser": "^1.1.4",
     "lodash": "^4.17.4",
-    "schema-to-object": "^1.1.0"
+    "schema-to-object": "^1.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
