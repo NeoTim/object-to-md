@@ -80,8 +80,8 @@
                 "description": "活动token"
               },
               "actId": {
-                "default": "活动id",
-                "type": "string",
+                "default": 1000,
+                "type": "number",
                 "description": "活动唯一ID"
               }
             },

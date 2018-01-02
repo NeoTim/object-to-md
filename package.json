@@ -16,7 +16,7 @@
     "url": "git+https://github.com/forsigner/object-to-md.git"
   },
   "dependencies": {
-    "json-comment-parser": "^1.1.4",
+    "json-comment-parser": "^1.1.5",
     "lodash": "^4.17.4",
     "schema-to-object": "^1.2.0"
   },

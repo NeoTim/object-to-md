@@ -18,7 +18,7 @@ function compileRequest(request) {
     requestObj[item] = schemeToObject(toJS(request[item]), { comment: true });
   });
 
-  const requestContent = stringify(requestObj, null, 2);
+  const requestContent = stringify(requestObj);
 
   const compiledRequest = _.template(REQUEST);
   return compiledRequest({ request: requestContent });
